@@ -52,21 +52,12 @@ p {
     flex-wrap: wrap;
     width: 500px;
     height: 350px;
-    margin: 5%;
     background: #d3d3d3;
     align-content: center;
     justify-content: center;
     text-align: center;
     box-shadow: #3d3d3d 0.75em 0.75em 0.75em, #3d3d3d -0.25em -0.25em 0.75em;
     
-}
-
-.box {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
 }
 
 .top {
