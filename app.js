@@ -13,17 +13,23 @@ const submitButton = document.getElementById('submit-button');
 
 // -Assign variable for array for font-family
 
-const fontArray = ['subway-berlin-sc, sans-serif', 'ff-providence-sans-web-pro, sans-serif', 'skippy-sharp, sans-serif', 'ff-market-web, sans-serif', 'chauncy-pro, sans-serif', 'sketchnote-square, sans-serif'];
+const fontArray = ['permanent-marker, sans-serif', 'subway-berlin-sc, sans-serif', 'ff-providence-sans-web-pro, sans-serif', 'skippy-sharp, sans-serif', 'ff-market-web, sans-serif', 'chauncy-pro, sans-serif', 'tekton-pro, sans-serif', 'felt-tip-senior, sans-serif'];
 
 // -Validate that array exists
 // console.log(fontArray);
 // --TRUE--
 
 let i = 0;
-console.log(fontArray[i]);
-i++;
-console.log(fontArray[i]);
+// -Validate that i will access array item 0 in fontArray
+// console.log(fontArray[i]);
+// --TRUE
 
+i++;
+// -Validate that i will increase and access next array item in fontArray
+// console.log(fontArray[i]);
+// --TRUE
+
+// -Create function for fontChange to nameName, insert function to submitButton
 const fontChange = () => {
     nameName.style.fontFamily = fontArray[i % fontArray.length];
     i++;
