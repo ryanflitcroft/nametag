@@ -13,18 +13,20 @@ const submitButton = document.getElementById('submit-button');
 
 // -Assign variable for array for font-family
 
-const fontArray = ['felt-tip-senior, sans-serif', 'subway-berlin-sc, sans-serif', 'sans-serif', 'ff-providence-sans-web-pro, sans-serif', 'skippy-sharp, sans-serif', 'ff-market-web, sans-serif', 'chauncy-pro, sans-serif', 'sketchnote-square, sans-serif']
+const fontArray = ['subway-berlin-sc, sans-serif', 'ff-providence-sans-web-pro, sans-serif', 'skippy-sharp, sans-serif', 'ff-market-web, sans-serif', 'chauncy-pro, sans-serif', 'sketchnote-square, sans-serif'];
 
 // -Validate that array exists
 // console.log(fontArray);
 // --TRUE--
 
+let i = 0;
+console.log(fontArray[i]);
+i++;
+console.log(fontArray[i]);
+
 const fontChange = () => {
-    for (let i = 0; i < fontArray.length; i++) {
-        const newFont = fontArray[i];
-        console.log(newFont);
-        nameName.style.fontFamily = newFont;
-    }
+    nameName.style.fontFamily = fontArray[i % fontArray.length];
+    i++;
 };
 
 // -Add an event listener to submitButton
