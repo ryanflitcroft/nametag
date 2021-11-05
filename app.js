@@ -18,10 +18,10 @@ const btmSect = document.getElementById('btm');
 
 // -Assign variable for array for font-family
 
-const fontArray = ['permanent-marker, sans-serif', 'subway-berlin-sc, sans-serif', 'ff-providence-sans-web-pro, sans-serif', 'skippy-sharp, sans-serif', 'ff-market-web, sans-serif', 'chauncy-pro, sans-serif', 'tekton-pro, sans-serif', 'felt-tip-senior, sans-serif'];
+const fontArray = ['sketchnote-square, sans-serif', 'permanent-marker, sans-serif', 'subway-berlin-sc, sans-serif', 'ff-providence-sans-web-pro, sans-serif', 'skippy-sharp, sans-serif', 'ff-market-web, sans-serif', 'chauncy-pro, sans-serif', 'tekton-pro, sans-serif', 'subway-new-york-std, sans-serif', 'felt-tip-senior, sans-serif'];
 
 
-const colorArray = ['dodgerblue', 'blueviolet', 'cadetblue', 'darkcyan', 'darkgoldenrod', 'darkviolet', 'lavender', 'seagreen', 'red'];
+const colorArray = ['dodgerblue', 'blueviolet', 'cadetblue', 'darkcyan', 'darkgoldenrod', 'darkviolet', 'darkslategray', 'red', 'darkgreen', 'darkorange', 'darkseagreen', 'deeppink', 'olivedrab'];
 
 
 // -Validate that array exists
@@ -57,19 +57,34 @@ const colorChange = () => {
     i++;
 };
 
+const submitFun = () => {
+    const newName = inputText.value;
+    fontChange();
+    colorChange();
+    nameName.textContent = newName;
+    inputText.value = ' ';
+};
+
+// -Validate submitFun exists
+// console.log(submitFun);
+// --TRUE
+
 // -Add an event listener to submitButton
 // -Replace textContent of nameName with value of inputText
 
 submitButton.addEventListener('click', () => {
-    const newName = inputText.value;
+    // const newName = inputText.value;
 
     // -Validate that newName exists
     //console.log(newName);
     // --TRUE--
 
-    fontChange();
+    // fontChange();
 
-    colorChange();
-    nameName.textContent = newName;
-    inputText.value = ' ';
+    // colorChange();
+    // nameName.textContent = newName;
+    // inputText.value = ' ';
+
+    // Created function submitFun for dryer code 
+    submitFun();
 });
